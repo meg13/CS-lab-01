@@ -14,34 +14,29 @@ namespace Properties
         private string[] names;
 
         // TODO improve
-        public IList<string> GetSeeds()
-        {
-            return this.seeds.ToList();
+        //public IList<string> GetSeeds() => this.seeds.ToList();
+
+        // TODO improve
+        //public void SetSeeds(IList<string> seeds) => this.seeds = seeds.ToArray();
+
+        public IList<string> Seeds{
+            get {return this.seeds.ToList(); }
+            set {this.seeds = value.ToArray(); }
         }
 
         // TODO improve
-        public void SetSeeds(IList<string> seeds)
-        {
-            this.seeds = seeds.ToArray();
+        //public IList<string> GetNames() => this.names.ToList();
+
+        // TODO improve
+        //public void SetNames(IList<string> names) => this.names = names.ToArray();
+
+        public IList<string> Names{
+            get {return this.names.ToList(); }
+            set {this.names = value.ToArray(); }
         }
 
         // TODO improve
-        public IList<string> GetNames()
-        {
-            return this.names.ToList();
-        }
-
-        // TODO improve
-        public void SetNames(IList<string> names)
-        {
-            this.names = names.ToArray();
-        }
-
-        // TODO improve
-        public int GetDeckSize()
-        {
-            return this.names.Length * this.seeds.Length;
-        }
+        public int GetDeckSize() => this.names.Length * this.seeds.Length;
 
         /// TODO improve
         public ISet<Card> GetDeck()
